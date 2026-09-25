@@ -7,7 +7,7 @@ A CNN é uma variação baseada na **VGG16-BN** (VGG16 com *Batch Normalization*
 
 * **Camadas Convolucionais:** 13 camadas distribuídas em 5 blocos de extração de características (`feature extraction`).
 * **Normalização:** `BatchNorm2d` aplicado após cada convolução.
-* **Classificador (Dense):** 3 camadas lineares (`Linear`) totalizando 4096 neurónios por camada oculta, protegidas por `Dropout (p=0.5)` para prevenir o *overfitting*.
+* **Classificador (Dense):** 3 camadas lineares, totalizando 4096 neurónios por camada oculta, protegidas por `Dropout (p=0.5)` para prevenir o *overfitting*.
 
 ## Otimizações e Aceleração de Hardware
 * **Mixed Precision Training (FP16):** Utilização do `torch.amp.autocast` e `GradScaler` para transferir a carga matemática para os Tensor Cores, acelerando o cálculo das matrizes e otimizando o uso da memória VRAM.
