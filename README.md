@@ -11,7 +11,7 @@ A CNN é uma variação baseada na **VGG16-BN** (VGG16 com *Batch Normalization*
 
 ## Otimizações e Aceleração de Hardware
 * **Mixed Precision Training (FP16):** Utilização do `torch.amp.autocast` e `GradScaler` para transferir a carga matemática para os Tensor Cores, acelerando o cálculo das matrizes e otimizando o uso da memória VRAM.
-* **Otimizador:** Adam Optimizer com a *learning rate* em `1e-4`.
+* **Otimizador:** Adam Optimizer com *learning rate* em `1e-4`.
 
 ## Os pesos da rede são salvos automaticamente ao final do treinamento
 * torch.save(model.state_dict(), "pesoscnn.pth")
